@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "VmTtDdIhvRe1sYXoYZElL8NmtZs1CU32iafsvEXn99H2YHZ8Rq+ePa1F+9eU26rHeUDjGzyFco2xPdnMYDl7Pg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\wallsilv\\Desktop\\ORM\\ORM.Application\\ORM.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\wallsilv\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\wallsilv\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\wallsilv\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\wallsilv\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\wallsilv\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
+    "C:\\Users\\wallsilv\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.7.0\\system.reflection.emit.ilgeneration.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

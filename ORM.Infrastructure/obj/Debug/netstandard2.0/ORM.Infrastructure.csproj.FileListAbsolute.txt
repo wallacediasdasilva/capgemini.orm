@@ -1,0 +1,12 @@
+C:\Users\wallsilv\Desktop\ORM\ORM.Infrastructure\bin\Debug\netstandard2.0\ORM.Domain.dll
+C:\Users\wallsilv\Desktop\ORM\ORM.Infrastructure\obj\Debug\netstandard2.0\ORM.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\wallsilv\Desktop\ORM\ORM.Infrastructure\obj\Debug\netstandard2.0\ORM.Infrastructure.AssemblyInfo.cs
+C:\Users\wallsilv\Desktop\ORM\ORM.Infrastructure\obj\Debug\netstandard2.0\ORM.Infrastructure.csprojAssemblyReference.cache
+C:\Users\wallsilv\Desktop\ORM\ORM.Infrastructure\bin\Debug\netstandard2.0\ORM.Infrastructure.deps.json
+C:\Users\wallsilv\Desktop\ORM\ORM.Infrastructure\bin\Debug\netstandard2.0\ORM.Infrastructure.dll
+C:\Users\wallsilv\Desktop\ORM\ORM.Infrastructure\bin\Debug\netstandard2.0\ORM.Infrastructure.pdb
+C:\Users\wallsilv\Desktop\ORM\ORM.Infrastructure\bin\Debug\netstandard2.0\ORM.Domain.pdb
+C:\Users\wallsilv\Desktop\ORM\ORM.Infrastructure\obj\Debug\netstandard2.0\ORM.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\wallsilv\Desktop\ORM\ORM.Infrastructure\obj\Debug\netstandard2.0\ORM.Infrastructure.csproj.CopyComplete
+C:\Users\wallsilv\Desktop\ORM\ORM.Infrastructure\obj\Debug\netstandard2.0\ORM.Infrastructure.dll
+C:\Users\wallsilv\Desktop\ORM\ORM.Infrastructure\obj\Debug\netstandard2.0\ORM.Infrastructure.pdb

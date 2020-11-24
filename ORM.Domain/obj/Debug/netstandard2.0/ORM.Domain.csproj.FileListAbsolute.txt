@@ -1,0 +1,9 @@
+C:\Users\wallsilv\Desktop\ORM\ORM.Domain\bin\Debug\netstandard2.0\ORM.Domain.deps.json
+C:\Users\wallsilv\Desktop\ORM\ORM.Domain\bin\Debug\netstandard2.0\ORM.Domain.dll
+C:\Users\wallsilv\Desktop\ORM\ORM.Domain\bin\Debug\netstandard2.0\ORM.Domain.pdb
+C:\Users\wallsilv\Desktop\ORM\ORM.Domain\obj\Debug\netstandard2.0\ORM.Domain.csprojAssemblyReference.cache
+C:\Users\wallsilv\Desktop\ORM\ORM.Domain\obj\Debug\netstandard2.0\ORM.Domain.AssemblyInfoInputs.cache
+C:\Users\wallsilv\Desktop\ORM\ORM.Domain\obj\Debug\netstandard2.0\ORM.Domain.AssemblyInfo.cs
+C:\Users\wallsilv\Desktop\ORM\ORM.Domain\obj\Debug\netstandard2.0\ORM.Domain.csproj.CoreCompileInputs.cache
+C:\Users\wallsilv\Desktop\ORM\ORM.Domain\obj\Debug\netstandard2.0\ORM.Domain.dll
+C:\Users\wallsilv\Desktop\ORM\ORM.Domain\obj\Debug\netstandard2.0\ORM.Domain.pdb

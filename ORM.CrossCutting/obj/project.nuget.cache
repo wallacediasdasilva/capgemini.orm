@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "AMBQ8HzZgYNacNoSqMW8lDUkI61qRQyXboQM5j/6KY2pchhfqfzV+mHqPoJoNGVu0eXY8iYIB2pbJKbOrP/Fmg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\wallsilv\\Desktop\\ORM\\ORM.CrossCutting\\ORM.CrossCutting.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\wallsilv\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\wallsilv\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
