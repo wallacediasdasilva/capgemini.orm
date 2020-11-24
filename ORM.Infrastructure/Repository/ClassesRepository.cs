@@ -30,7 +30,7 @@ namespace ORM.Infrastructure.Repository
 
             var query = "insert into classes (name, coordinatorId) values (@name, @coordinator)";
 
-            var result = connection.Execute(query, new { name = classes.Name, coordinator = classes.Coordinator.Id });
+            var result = connection.Execute(query, new { name = classes.Name, coordinator = classes.CoordinatorId });
 
             return classes;
         }

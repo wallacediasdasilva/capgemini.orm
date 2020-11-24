@@ -2,9 +2,7 @@
 {
     public class Classes
     {
-        public int Id { get; set; }
         public string Name { get; set; }
-
-        public Coordinator Coordinator { get; set; }
+        public int CoordinatorId { get; set; }
     }
 }
