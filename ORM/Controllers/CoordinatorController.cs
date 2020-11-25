@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ORM.Application.App.Interface;
 using ORM.Domain.Model;
-using System.Collections.Generic;
+using System;
 
 namespace ORM.Controllers
 {
@@ -17,29 +17,57 @@ namespace ORM.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Coordinator> Get()
+        public IActionResult Get()
         {
-            return _coordinatorApplication.ListAll();
+            try
+            {
+                return Ok(_coordinatorApplication.ListAll());
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex);
+            }
         }
 
         [HttpPost]
-        public Coordinator Post([FromBody] Coordinator coordinator)
+        public IActionResult Post([FromBody] Coordinator coordinator)
         {
-            return _coordinatorApplication.Create(coordinator);
+            try
+            {
+                return Created("", _coordinatorApplication.Create(coordinator));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
         [HttpPut("{id}")]
-        public Coordinator Put([FromQuery] int id, [FromBody] Coordinator coordinator)
+        public IActionResult Put([FromQuery] int id, [FromBody] Coordinator coordinator)
         {
-            return _coordinatorApplication.Update(id, coordinator);
+            try
+            {
+                return Ok(_coordinatorApplication.Update(id, coordinator));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
         [HttpDelete]
         public IActionResult Delete([FromQuery] int id)
         {
-            _coordinatorApplication.Delete(id);
+            try
+            {
+                _coordinatorApplication.Delete(id);
 
-            return Ok();
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex);
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ORM.Application.App.Interface;
 using ORM.Domain.Model;
+using System;
 using System.Collections.Generic;
 
 namespace ORM.Controllers
@@ -17,46 +18,88 @@ namespace ORM.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Classes> Get()
+        public ActionResult<IEnumerable<Classes>> Get()
         {
-            return _classesApplication.ListAll();
+            try
+            {
+                return Ok(_classesApplication.ListAll());
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex);
+            }
         }
 
         [HttpPost]
-        public Classes Post([FromBody] Classes classes)
+        public IActionResult Post([FromBody] Classes classes)
         {
-            return _classesApplication.CreateStudent(classes);
+            try
+            {
+                return Created("", _classesApplication.CreateStudent(classes));
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
         [HttpPut("{id}")]
-        public Classes Put([FromQuery] int id, [FromBody] Classes classes)
+        public IActionResult Put([FromQuery] int id, [FromBody] Classes classes)
         {
-            return _classesApplication.UpdateStudent(id, classes);
+            try
+            {
+                return Ok(_classesApplication.UpdateStudent(id, classes));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
         [HttpDelete]
         public IActionResult Delete([FromQuery] int id)
         {
-            _classesApplication.DeleteStudent(id);
-
-            return Ok();
+            try
+            {
+                _classesApplication.DeleteStudent(id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex);
+            }
         }
 
         [HttpPatch("{id}")]
         public IActionResult Patch([FromQuery] int id, [FromBody] Classes classes)
         {
-            _classesApplication.Patch(id, classes);
+            try
+            {
+                _classesApplication.Patch(id, classes);
 
-            return Ok();
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex);
+            }
         }
 
         [HttpPost]
         [Route("[controller]/[action]")]
         public IActionResult Relashionship([FromBody] Registration registration)
         {
-            _classesApplication.Relashionship(registration);
+            try
+            {
+                _classesApplication.Relashionship(registration);
 
-            return Ok();
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex);
+            }
         }
     }
 }

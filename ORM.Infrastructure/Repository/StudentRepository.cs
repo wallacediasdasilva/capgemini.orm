@@ -25,17 +25,6 @@ namespace ORM.Infrastructure.Repository
             return sensorData;
         }
 
-        public int Insert(long step)
-        {
-            var connection = new SqlConnection(_connectionString);
-
-            var query = "insert into student (step)values (@step)";
-
-            var result = connection.Execute(query, new { step = step });
-
-            return result;
-        }
-
         public Student CreateStudent(Student student)
         {
             var connection = new SqlConnection(_connectionString);

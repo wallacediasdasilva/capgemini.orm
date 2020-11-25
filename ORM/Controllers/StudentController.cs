@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ORM.Application.App.Interface;
 using ORM.Domain.Model;
-using System.Collections.Generic;
+using System;
 
 namespace ORM.Controllers
 {
@@ -18,37 +18,73 @@ namespace ORM.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Student> Get()
+        public IActionResult Get()
         {
-            return _studentApplication.ListAll();
+            try
+            {
+                return Ok(_studentApplication.ListAll());
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex);
+            }
         }
 
         [HttpPost]
-        public Student Post([FromBody] Student student)
+        public IActionResult Post([FromBody] Student student)
         {
-            return _studentApplication.Create(student);
+            try
+            {
+                return Created("", _studentApplication.Create(student));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
         [HttpPut("{id}")]
-        public Student Put([FromQuery] int id, [FromBody] Student student)
+        public IActionResult Put([FromQuery] int id, [FromBody] Student student)
         {
-            return _studentApplication.Update(id, student);
+            try
+            {
+                return Created("", _studentApplication.Update(id, student));
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex);
+            }
         }
 
         [HttpDelete]
         public IActionResult Delete([FromQuery] int id)
         {
-            _studentApplication.Delete(id);
+            
+            try
+            {
+                _studentApplication.Delete(id);
 
-            return Ok();
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex);
+            }
         }
 
         [HttpPatch("{id}")]
         public IActionResult Patch([FromQuery] int id, [FromBody] Student student)
         {
-            _studentApplication.Patch(id, student);
+            try
+            {
+                _studentApplication.Patch(id, student);
 
-            return Ok();
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex);
+            }
         }
     }
 }

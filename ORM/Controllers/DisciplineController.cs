@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ORM.Application.App.Interface;
 using ORM.Domain.Model;
-using System.Collections.Generic;
+using System;
 
 namespace ORM.Controllers
 {
@@ -17,29 +17,57 @@ namespace ORM.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Discipline> Get()
+        public IActionResult Get()
         {
-            return _disciplineApplication.ListAll();
+            try
+            {
+                return Ok(_disciplineApplication.ListAll());
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex);
+            }
         }
 
         [HttpPost]
-        public Discipline Post([FromBody] Discipline discipline)
+        public IActionResult Post([FromBody] Discipline discipline)
         {
-            return _disciplineApplication.Create(discipline);
+            try
+            {
+                return Created("", _disciplineApplication.Create(discipline));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
         [HttpPut("{id}")]
-        public Discipline Put([FromQuery] int id, [FromBody] Discipline discipline)
+        public IActionResult Put([FromQuery] int id, [FromBody] Discipline discipline)
         {
-            return _disciplineApplication.Update(id, discipline);
+            try
+            {
+                return Ok(_disciplineApplication.Update(id, discipline));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
         [HttpDelete]
         public IActionResult Delete([FromQuery] int id)
         {
-            _disciplineApplication.Delete(id);
+            try
+            {
+                _disciplineApplication.Delete(id);
 
-            return Ok();
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex);
+            }
         }
     }
 }

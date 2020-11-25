@@ -7,7 +7,6 @@ namespace ORM.Domain.Interface
     {
         IEnumerable<Student> ListAll();
 
-        int Insert(long step);
         Student CreateStudent(Student student);
         Student UpdateStudent(int id, Student student);
         void DeleteStudent(int id);

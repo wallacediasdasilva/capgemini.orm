@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Microsoft.Extensions.Configuration;
 using ORM.Domain.Interface;
 using ORM.Domain.Model;
 using System.Collections.Generic;
@@ -10,9 +11,9 @@ namespace ORM.Infrastructure.Repository
     {
         private readonly string _connectionString;
 
-        public ClassesRepository()
+        public ClassesRepository(IConfiguration configuration)
         {
-            _connectionString = "Server=.\\SQLEXPRESS;Database=ORM;Trusted_Connection=True;MultipleActiveResultSets=true;";
+            _connectionString = configuration.GetConnectionString("ORM");
         }
 
         public IEnumerable<Classes> ListAll()
