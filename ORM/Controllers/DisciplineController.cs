@@ -42,7 +42,7 @@ namespace ORM.Controllers
             }
         }
 
-        [HttpPut("{id}")]
+        [HttpPut]
         public IActionResult Put([FromQuery] int id, [FromBody] Discipline discipline)
         {
             try

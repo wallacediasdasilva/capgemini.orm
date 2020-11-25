@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
 using ORM.Application.App;
 using ORM.Application.App.Interface;
 using ORM.Domain.Interface;
@@ -31,7 +32,13 @@ namespace ORM
             services.AddSingleton<IStudentRepository, StudentRepository>();
             services.AddSingleton<ICoordinatorRepository, CoordinatorRepository>();
             services.AddSingleton<IDisciplineRepository, DisciplineRepository>();
-            services.AddControllers();
+
+            services.AddControllers().AddNewtonsoftJson(o =>
+            {
+                o.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            });
+
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +50,14 @@ namespace ORM
             }
 
             app.UseHttpsRedirection();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
+
 
             app.UseRouting();
 

@@ -43,7 +43,7 @@ namespace ORM.Controllers
             }
         }
 
-        [HttpPut("{id}")]
+        [HttpPut]
         public IActionResult Put([FromQuery] int id, [FromBody] Student student)
         {
             try
@@ -72,7 +72,7 @@ namespace ORM.Controllers
             }
         }
 
-        [HttpPatch("{id}")]
+        [HttpPatch]
         public IActionResult Patch([FromQuery] int id, [FromBody] Student student)
         {
             try
