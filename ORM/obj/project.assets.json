@@ -1155,45 +1155,40 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\wallsilv\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\dias_\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wallsilv\\Desktop\\ORM\\ORM\\ORM.csproj",
+      "projectUniqueName": "C:\\projetos\\ORM\\ORM.csproj",
       "projectName": "ORM",
-      "projectPath": "C:\\Users\\wallsilv\\Desktop\\ORM\\ORM\\ORM.csproj",
-      "packagesPath": "C:\\Users\\wallsilv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wallsilv\\Desktop\\ORM\\ORM\\obj\\",
+      "projectPath": "C:\\projetos\\ORM\\ORM.csproj",
+      "packagesPath": "C:\\Users\\dias_\\.nuget\\packages\\",
+      "outputPath": "C:\\projetos\\ORM\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\wallsilv\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\dias_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://tfs-agora.corpt.bradesco.com.br/tfs/TeamDDSProjectCollection/_projects": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\wallsilv\\Desktop\\ORM\\ORM.Application\\ORM.Application.csproj": {
-              "projectPath": "C:\\Users\\wallsilv\\Desktop\\ORM\\ORM.Application\\ORM.Application.csproj"
+            "C:\\projetos\\ORM.Application\\ORM.Application.csproj": {
+              "projectPath": "C:\\projetos\\ORM.Application\\ORM.Application.csproj"
             },
-            "C:\\Users\\wallsilv\\Desktop\\ORM\\ORM.Domain\\ORM.Domain.csproj": {
-              "projectPath": "C:\\Users\\wallsilv\\Desktop\\ORM\\ORM.Domain\\ORM.Domain.csproj"
+            "C:\\projetos\\ORM.Domain\\ORM.Domain.csproj": {
+              "projectPath": "C:\\projetos\\ORM.Domain\\ORM.Domain.csproj"
             },
-            "C:\\Users\\wallsilv\\Desktop\\ORM\\ORM.Infrastructure\\ORM.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\wallsilv\\Desktop\\ORM\\ORM.Infrastructure\\ORM.Infrastructure.csproj"
+            "C:\\projetos\\ORM.Infrastructure\\ORM.Infrastructure.csproj": {
+              "projectPath": "C:\\projetos\\ORM.Infrastructure\\ORM.Infrastructure.csproj"
             }
           }
         }
@@ -1206,6 +1201,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
             "target": "Package",
@@ -1226,6 +1222,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.10, 3.1.10]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1234,7 +1236,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200-preview.21077.7\\RuntimeIdentifierGraph.json"
       }
     }
   }
